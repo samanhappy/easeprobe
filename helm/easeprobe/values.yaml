@@ -12,7 +12,7 @@ config:
         file: /var/log/easeprobe.log
   settings:
     probe:
-      timeout: 30s
+      timeout: 60s
       interval: 1m
 
 image:
