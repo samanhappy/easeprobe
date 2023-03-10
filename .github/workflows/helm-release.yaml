@@ -2,11 +2,13 @@ name: Release Helm Charts
 
 on:
   push:
+    branches:
+      - main
     paths:
       - "helm/**"
 
 jobs:
-  release:
+  release-helm:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -31,3 +33,4 @@ jobs:
           charts_dir: helm
         env:
           CR_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+          CR_RELEASE_NAME_TEMPLATE: "easeprobe-helm-chart-v{{ .Version }}"
