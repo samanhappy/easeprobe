@@ -5,6 +5,33 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 2.0.0
+    created: "2023-03-15T03:28:24.946085214Z"
+    dependencies:
+    - condition: prometheus.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 19.3.3
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 6.50.6
+    description: EaseProbe is a simple, standalone, and lightweight tool that can
+      do health/status checking, written in Go
+    digest: 96fec68bfd903347699c87575e221579b6bfa54356dcd6d5369c8f2a733e6e78
+    home: https://github.com/megaease/easeprobe
+    maintainers:
+    - name: MegaEase
+      url: https://www.megaease.com
+    name: easeprobe
+    sources:
+    - https://github.com/megaease/easeprobe
+    urls:
+    - https://github.com/samanhappy/easeprobe/releases/download/easeprobe-helm-charts-v1.0.1/easeprobe-1.0.1.tgz
+    version: 1.0.1
+  - annotations:
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 2.0.0
     created: "2023-03-10T14:01:38.000401142Z"
     dependencies:
     - condition: prometheus.enabled
@@ -55,4 +82,4 @@ entries:
     urls:
     - https://github.com/samanhappy/easeprobe/releases/download/easeprobe-0.0.1/easeprobe-0.0.1.tgz
     version: 0.0.1
-generated: "2023-03-10T14:01:38.000415042Z"
+generated: "2023-03-15T03:28:24.946097215Z"
