@@ -41,7 +41,8 @@ spec:
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
           ports:
-            - containerPort: 8181
+            - name: http
+              containerPort: 8181
           volumeMounts:
             - mountPath: /opt/config.yaml
               name: config
