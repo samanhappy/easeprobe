@@ -40,6 +40,8 @@ jobs:
         run: go get -v -t -d ./...
       - name: Go Test
         run: make test TEST_FLAGS="-coverprofile=coverage.txt -covermode=atomic"
+        with:
+          goarch: arm64
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4.1.1
         with:
