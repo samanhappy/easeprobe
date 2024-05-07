@@ -24,9 +24,9 @@ import (
 	"reflect"
 	"testing"
 
-	"bou.ke/monkey"
 	"github.com/megaease/easeprobe/global"
 	"github.com/megaease/easeprobe/probe/client/conf"
+	"github.com/procodr/monkey"
 	"github.com/stretchr/testify/assert"
 
 	"go.mongodb.org/mongo-driver/mongo"

@@ -25,10 +25,10 @@ import (
 	"testing"
 	"time"
 
-	"bou.ke/monkey"
 	"github.com/go-sql-driver/mysql"
 	"github.com/megaease/easeprobe/global"
 	"github.com/megaease/easeprobe/probe/client/conf"
+	"github.com/procodr/monkey"
 	"github.com/stretchr/testify/assert"
 )
 

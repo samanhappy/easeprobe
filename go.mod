@@ -5,7 +5,6 @@ go 1.21
 toolchain go1.21.6
 
 require (
-	bou.ke/monkey v1.0.2
 	github.com/Knetic/govaluate v3.0.0+incompatible
 	github.com/antchfx/htmlquery v1.3.0
 	github.com/antchfx/jsonquery v1.3.3
@@ -19,6 +18,7 @@ require (
 	github.com/go-sql-driver/mysql v1.8.1
 	github.com/go-zookeeper/zk v1.0.3
 	github.com/gorilla/websocket v1.5.0
+	github.com/procodr/monkey v0.0.0-20221102224215-28eb53c3a645
 	github.com/prometheus-community/pro-bing v0.4.0
 	github.com/prometheus/client_golang v1.18.0
 	github.com/segmentio/kafka-go v0.4.47
@@ -37,6 +37,7 @@ require (
 )
 
 require (
+	bou.ke/monkey v1.0.2 // indirect
 	filippo.io/edwards25519 v1.1.0 // indirect
 	github.com/a8m/envsubst v1.4.2 // indirect
 	github.com/alecthomas/participle/v2 v2.1.1 // indirect
