@@ -35,12 +35,11 @@ jobs:
         uses: actions/setup-go@v5
         with:
           go-version-file: go.mod
-          goarch: arm64
         id: go
       - name: Go Get dependencies
         run: go get -v -t -d ./...
       - name: Go Test
-        run: make test TEST_FLAGS="-coverprofile=coverage.txt -covermode=atomic"          
+        run: GOARCH=arm64 make test TEST_FLAGS="-coverprofile=coverage.txt -covermode=atomic"          
       - name: Upload coverage to Codecov
         uses: codecov/codecov-action@v4.1.1
         with:
