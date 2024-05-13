@@ -18,6 +18,7 @@
 package monkey
 
 import (
+	"fmt"
 	"reflect"
 
 	"github.com/agiledragon/gomonkey/v2"
@@ -27,7 +28,7 @@ var patchesMap = make(map[string]*gomonkey.Patches)
 
 // Patch replaces a function with another
 func Patch(target, replacement interface{}) *gomonkey.Patches {
-	key := reflect.TypeOf(target).String()
+	key := fmt.Sprintf("%v", target)
 	existingPatches, ok := patchesMap[key]
 	if ok {
 		existingPatches.Reset()
@@ -39,18 +40,19 @@ func Patch(target, replacement interface{}) *gomonkey.Patches {
 
 // Unpatch unpatch a patch
 func Unpatch(target interface{}) bool {
-	patches, ok := patchesMap[reflect.TypeOf(target).String()]
+	key := fmt.Sprintf("%v", target)
+	patches, ok := patchesMap[key]
 	if !ok {
 		return false
 	}
 	patches.Reset()
-	delete(patchesMap, reflect.TypeOf(target).String())
+	delete(patchesMap, key)
 	return true
 }
 
 // PatchInstanceMethod replaces an instance method methodName for the type target with replacement
 func PatchInstanceMethod(target reflect.Type, methodName string, replacement interface{}) *gomonkey.Patches {
-	key := target.String() + methodName
+	key := fmt.Sprintf("%v:%v", target, methodName)
 	existingPatches, ok := patchesMap[key]
 	if ok {
 		existingPatches.Reset()
@@ -62,12 +64,13 @@ func PatchInstanceMethod(target reflect.Type, methodName string, replacement int
 
 // UnpatchInstanceMethod unpatch a patch
 func UnpatchInstanceMethod(target reflect.Type, methodName string) bool {
-	patches, ok := patchesMap[target.String()+methodName]
+	key := fmt.Sprintf("%v:%v", target, methodName)
+	patches, ok := patchesMap[key]
 	if !ok {
 		return false
 	}
 	patches.Reset()
-	delete(patchesMap, target.String()+methodName)
+	delete(patchesMap, key)
 	return true
 }
 
