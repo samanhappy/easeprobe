@@ -23,8 +23,8 @@ import (
 	"testing"
 	"time"
 
-	"bou.ke/monkey"
 	"github.com/bradfitz/gomemcache/memcache"
+	"github.com/go-kiss/monkey"
 	"github.com/megaease/easeprobe/probe/client/conf"
 	"github.com/stretchr/testify/assert"
 )

@@ -24,7 +24,7 @@ import (
 	"reflect"
 	"testing"
 
-	"bou.ke/monkey"
+	"github.com/go-kiss/monkey"
 	"github.com/go-redis/redis/v8"
 	"github.com/megaease/easeprobe/global"
 	"github.com/megaease/easeprobe/probe/client/conf"

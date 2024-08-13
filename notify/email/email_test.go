@@ -22,7 +22,7 @@ import (
 	"reflect"
 	"testing"
 
-	"bou.ke/monkey"
+	"github.com/go-kiss/monkey"
 	"github.com/megaease/easeprobe/global"
 	"github.com/megaease/easeprobe/report"
 	"github.com/stretchr/testify/assert"

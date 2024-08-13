@@ -23,7 +23,7 @@ import (
 	"path/filepath"
 	"testing"
 
-	"bou.ke/monkey"
+	"github.com/go-kiss/monkey"
 	"github.com/megaease/easeprobe/global"
 
 	"github.com/stretchr/testify/assert"

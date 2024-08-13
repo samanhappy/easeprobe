@@ -23,7 +23,7 @@ import (
 	"testing"
 	"time"
 
-	"bou.ke/monkey"
+	"github.com/go-kiss/monkey"
 	"github.com/stretchr/testify/assert"
 )
 

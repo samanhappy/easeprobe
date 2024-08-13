@@ -23,10 +23,10 @@ import (
 	"reflect"
 	"testing"
 
-	"bou.ke/monkey"
 	"github.com/aws/aws-sdk-go/aws/request"
 	"github.com/aws/aws-sdk-go/aws/session"
 	"github.com/aws/aws-sdk-go/service/sns"
+	"github.com/go-kiss/monkey"
 	"github.com/megaease/easeprobe/global"
 	"github.com/megaease/easeprobe/report"
 	"github.com/stretchr/testify/assert"

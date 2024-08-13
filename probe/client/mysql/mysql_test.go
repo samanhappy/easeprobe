@@ -25,7 +25,7 @@ import (
 	"testing"
 	"time"
 
-	"bou.ke/monkey"
+	"github.com/go-kiss/monkey"
 	"github.com/go-sql-driver/mysql"
 	"github.com/megaease/easeprobe/global"
 	"github.com/megaease/easeprobe/probe/client/conf"
